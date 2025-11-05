@@ -1,0 +1,158 @@
+@use '_mediaQuery.scss' as *;
+
+.access {
+    background-color: #FFF;
+    height: 631px;
+    position: relative;
+
+    @include max(md) {
+        height: 100%;
+        padding-bottom: 100px;
+    }
+
+    ;
+
+
+
+    & .faq__img {
+        position: absolute;
+        z-index: 2;
+        top: -70px;
+        width: 349px;
+        height: 197px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        text-align: left;
+
+        @include max(md) {
+            position: absolute;
+            top: -80px;
+        }
+
+        & img {
+            width: 75%;
+        }
+    }
+
+    &__h2 {
+        text-align: center;
+        padding-top: 91px;
+        color: #4E301B;
+        text-align: center;
+        font-family: Noto Sans JP;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        @include max(md) {
+            padding-top: 60px;
+        }
+
+        
+    }
+
+    .access__ {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 90px;
+        margin-bottom: 78px;
+
+        @include max(md) {
+            display: block;
+            width: 100%;
+            margin-top: 40px;
+            margin-bottom: 0;
+        }
+
+        &ul {
+            width: 459px;
+            margin-right: 32px;
+
+            @include max(md) {
+                width: 90%;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+
+
+            &_li {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                height: 67px;
+                border-top: 1px solid #C6C6C6;
+                color: #4E301B;
+                font-family: Noto Sans JP;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+
+                @include max(md) {
+                    font-size: 16px;
+                }
+
+                &:nth-child(4) {
+                    border-bottom: 1px solid #C6C6C6;
+                }
+
+                &-name {
+                    width: 72px;
+                }
+
+                &-text {
+                    margin-left: 102px;
+
+                    @include max(md) {
+                        margin-left: 28px;
+                    }
+                }
+            }
+
+        }
+
+        &map {
+            @include max(md) {
+                width: 100%;
+                text-align: center;
+            }
+
+            iframe {
+                width: 443px;
+                height: 334px;
+                // flex-shrink: 0;
+
+                @include max(md) {
+                    width: 90%;
+                }
+            }
+        }
+
+        &img {
+            position: absolute;
+            bottom: -40px;
+            right: 0;
+
+
+            @include max(md) {
+                position: unset;
+            }
+
+            & img {
+                width:200px;
+
+                //ブドウ写真
+                @include max(md) {
+                    position: absolute;
+                    right: 0;
+                    // bottom: -40px;
+                }
+            }
+        }
+
+    }
+}
+

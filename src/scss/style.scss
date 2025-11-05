@@ -1,0 +1,32 @@
+@use "_reset.scss";
+@use "_header.scss";
+@use "_nav.scss";
+@use "_main.scss";
+@use "_product.scss";
+@use "_notice.scss";
+@use "_faq.scss"; //F＆Q
+@use "_access.scss"; //アクセス
+@use "_contact.scss"; //お問い合わせ
+@use "_footer.scss"; //フッター
+@use "_mediaQuery.scss"; //メディアクエリ
+
+
+body {
+    width: 100%;
+    background: #FDF9EF;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+
+.fadein{
+    transition: all 0.5s;
+    opacity: 0;
+    // overflow: hidden;
+}
+
+.scroll{
+    opacity: 1;
+    transition: all 0.5s;
+}
+

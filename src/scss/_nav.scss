@@ -1,0 +1,147 @@
+@use "_mediaQuery.scss" as *;
+
+.nav__.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav__ {
+  max-width: 1200px;
+  margin: -20px auto 0;
+
+  @include max(md) {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 0;
+    z-index: 100;
+    transition: all 0.3s;
+  }
+
+  & .menu_img {
+    display: block;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+
+    @include max(md) {
+      position: absolute;
+      top: 180px;
+      margin: 0 auto;
+      opacity: 1;
+      visibility: visible;
+      text-align: center;
+    }
+    @include max(sm) {
+      top: 120px;
+    }
+    & img {
+      width: 100px;
+      height: 100px;
+      @include max(sm) {
+        width: 55px;
+        height: 55px;
+      }
+    }
+  }
+
+  & .nav__ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include max(md) {
+      flex-direction: column;
+      margin-top: 390px;
+    }
+    @include max(sm) {
+      margin-top: 300px;
+    }
+
+    & .nav__ul_li {
+      // width: 130px;
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #4e301b;
+      text-align: center;
+      font-family: Noto Sans JP;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-right: 39px;
+
+      @include max(md) {
+        margin: 0;
+        margin-bottom: 16px;
+        font-size: 28px;
+      }
+      @include max(sm) {
+        font-size: 20px;
+      }
+
+      &:nth-child(3) {
+        margin-right: 49px;
+
+        @include max(md) {
+          margin: 0;
+          margin-bottom: 16px;
+        }
+      }
+
+      &:nth-child(5) {
+        margin-left: 49px;
+
+        @include max(md) {
+          margin: 0;
+          margin-bottom: 16px;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: #4e301b;
+        font-family: Noto Sans JP;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+
+    & .nav__title_li {
+      display: inline-flex;
+      padding: 22.28px 14px 17.944px 10.76px;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 11.246px;
+      margin-right: 28px;
+
+      @include max(md) {
+        position: absolute;
+        top: 300px;
+        margin-right: 0;
+        padding: 0;
+        z-index: 101;
+      }
+      @include max(sm) {
+        top: 210px;
+      }
+    }
+  }
+}
+
+//ハンバーガーメニュー
+.menu-open {
+  @include max(md) {
+    display: none;
+  }
+}

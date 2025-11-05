@@ -1,0 +1,111 @@
+@use '_mediaQuery.scss' as *;
+
+.notice {
+    background: #FFF;
+    height: 521px;
+
+    &__h2 {
+        color: #4E301B;
+        text-align: center;
+        font-family: Noto Sans JP;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-top: 91px;
+
+        @include max(md) {
+            padding-top: 50px;
+        }
+    }
+
+    &__content {
+        .notice__ul {
+            width: 934px;
+            margin: 90px auto 0;
+
+            @include max(md) {
+                width: 100%;
+                text-align: left;
+            }
+
+            .notice__li {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                height: 67px;
+                border-top: 1px solid #C6C6C6;
+
+                @include max(md) {
+                    width: 90%;
+                    display: block;
+                    height: 90px;
+                    margin: 0 auto;
+                }
+
+
+                &:nth-child(3) {
+                    border-bottom: 1px solid #C6C6C6;
+                }
+
+                &_time {
+                    time {
+                        color: #403F3F;
+                        font-family: Noto Sans JP;
+                        font-size: 13px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+
+                        @include max(md) {
+                            height: 30px;
+                            display: flex;
+                            align-items: center;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+
+                &_text {
+                    margin-left: 120px;
+
+                    @include max(md) {
+                        margin-left: 30px;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    p {
+                        color: #4E301B;
+                        font-family: Noto Sans JP;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }
+
+    &__img {
+        text-align: right;
+        margin-top: 15px;
+
+
+        @include max(md) {
+            width: 100%;
+            margin-top: 15px;
+
+        }
+
+        & img {
+            @include max(md) {
+                width: 150px;
+
+
+            }
+
+        }
+    }
+}

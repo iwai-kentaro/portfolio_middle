@@ -1,0 +1,5 @@
+
+AuthUserFile "/home/kenkomi/wiserock.jp/htpasswd/portfolio/.htpasswd"
+AuthName "Member Site"
+AuthType BASIC
+require valid-user

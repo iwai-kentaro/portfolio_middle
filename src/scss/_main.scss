@@ -1,0 +1,165 @@
+@use '_mediaQuery.scss' as *;
+
+.main {
+    position: relative;
+    height: 760px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include max(md) {
+        z-index: 80;
+        height: 750px;
+    }
+
+    @include max(sm) {
+        height: 600px;
+    }
+
+    & .main__ {
+
+        & .main__h2 {
+            position: relative;
+            z-index: 99;
+            color: #35A1C3;
+            text-align: center;
+            width: 740px;
+            height: 76px;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.90);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50px;
+            margin-top: 100px;
+            padding: 9px 10px;
+            border-radius: 50px;
+
+            @include max(md) {
+                z-index: -1;
+                margin: 65px 0px 0px 50px;
+                width: 60%;
+                height: 59px;
+            }
+
+            @include max(sm) {
+                width: 85vw;
+                margin: 65px auto 10px;
+            }
+
+
+            p {
+                font-family: Noto Sans JP;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+
+                @include max(md) {
+                    font-size: 24px;
+                }
+
+                @include max(sm) {
+                    font-size: 18px;
+                }
+
+            }
+        }
+
+        & .main__text {
+            position: relative;
+            z-index: 99;
+            color: #857868;
+            font-family: Noto Sans JP;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 250%;
+            width: 526px;
+            height: 590px;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.9);
+            margin: 29px 0 0 50px;
+            padding: 15px;
+
+            @include max(md) {
+                letter-spacing: 1px;
+                z-index: 1;
+                height: 100%;
+                margin-left: 50px;
+                line-height: normal;
+            }
+
+            @include max(sm) {
+                width: 85vw;
+                margin: 10px auto;
+            }
+        }
+
+        &img {
+            position: absolute;
+            display: block;
+            text-align: right;
+            width: 100%;
+            z-index: 0;
+            top: -56px;
+            right: 43px;
+
+            @include max(md) {
+                top: 90px;
+            }
+
+            @include max(sm) {
+                left: -20px;
+                top: 90px;
+            }
+
+
+            & img {
+                border-radius: 150px;
+                object-fit: contain;
+                height: auto;
+                @include max(md) {
+                    width: 70%;
+                }
+            }
+        }
+
+        .img02 {
+            position: absolute;
+            z-index: 0;
+            top: 506px;
+            right: 43px;
+            border-radius: 50px;
+            width: min(50% , 393px);
+            height: auto;
+            object-fit: contain;
+            @include max(md) {
+            }
+
+            @include max(sm) {
+                top: 360px;
+                right: 422px;
+                margin-right: -400px;
+
+            }
+
+            img {
+                @include max(md) {
+                    border-radius: 150px;
+                }
+
+                @include max(sm) {
+                    width: 336px;
+                }
+            }
+        }
+
+
+
+    }
+}
+
+.img02{
+    border-radius: 50px;
+}
